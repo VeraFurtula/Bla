@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Ime:</strong>
   <%= @covek.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Opis:</strong>
   <%= @covek.description %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @covek.picture %>
+  <strong>Slika:</strong>
+  <%= image_tag(@covek.picture_url, width: 200) if @covek.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_covek_path(@covek) %> |

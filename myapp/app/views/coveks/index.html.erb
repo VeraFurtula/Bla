@@ -17,7 +17,7 @@
       <tr>
         <td><%= covek.name %></td>
         <td><%= covek.description %></td>
-        <td><%= covek.picture %></td>
+        <td><%= image_tag(covek.picture_url, width: 200) if covek.picture.present? %></td>
         <td><%= link_to 'Show', covek %></td>
         <td><%= link_to 'Edit', edit_covek_path(covek) %></td>
         <td><%= link_to 'Destroy', covek, method: :delete, data: { confirm: 'Are you sure?' } %></td>
