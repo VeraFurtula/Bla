@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @covek.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @covek.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @covek.picture %>
+</p>
+
+<%= link_to 'Edit', edit_covek_path(@covek) %> |
+<%= link_to 'Back', coveks_path %>

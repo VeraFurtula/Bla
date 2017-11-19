@@ -1,0 +1,32 @@
+<%= form_with(model: covek, local: true) do |form| %>
+  <% if covek.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(covek.errors.count, "error") %> prohibited this covek from being saved:</h2>
+
+      <ul>
+      <% covek.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :covek_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :covek_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture, id: :covek_picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Covek < ApplicationRecord
+end
